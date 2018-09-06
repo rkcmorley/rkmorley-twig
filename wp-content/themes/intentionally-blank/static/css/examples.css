@@ -1,0 +1,32 @@
+* {
+  color: #444;
+  font-family: "Source Sans Pro";
+  font-weight: normal;
+  box-sizing: border-box; }
+
+.grid {
+  margin-bottom: 50px; }
+
+.ui-item, .grid > div {
+  margin-bottom: 10px; }
+
+.grid > div > div {
+  background-color: #bada55;
+  color: #75901f;
+  min-height: 100px;
+  padding: 10px; }
+
+.grid-3 {
+  margin-left: -20px; }
+  .grid-3:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .grid-3 > * {
+    float: left;
+    padding-left: 20px;
+    width: 33.33333%; }
+  .grid-3 > *:nth-child(1n) {
+    clear: none; }
+  .grid-3 > *:nth-child(3n + 1) {
+    clear: both; }

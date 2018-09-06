@@ -1,0 +1,32 @@
+{% extends "index.twig" %}
+
+{% block main %}
+  <div class="page-content--wrapper">
+    <div class="page-content__image--wrapper">
+      <img class="page-content__image" src="{{ post.thumbnail.src | resize(1000) }}" />
+    </div>
+  	<div class="hexagon"></div> 
+		<div class="page-content has-image">
+      <div class="page-tab--left"></div>
+      <div class="page-tab--right"></div>
+			<div class="tags">
+				<p class="page-tag">#web-design</p>
+        <p class="page-tag">#web-development</p>
+        <p class="page-tag">#strategy</p>
+			</div>
+		  <h1 class="page-title">{{ post.title }}</h1>
+		  <div class="body-content">
+        <p>{{post.content}}</p>
+      </div>
+      <img src="{{ Image(post.poster).src }}" class="poster" alt="{{ Image(post.poster).alt }}">
+      <div class="contact-info">
+        <a class="contact-info--phone" href="tel:{{post.phone_number}}">{{ post.phone_number }}</a>
+        <p class="contact-info--dot">・</p>
+        <a class="contact-info--email" href="mailto:{{post.contact_email}}">{{ post.contact_email }}</a>
+      </div>
+      <div class="location-block">
+        <p class="location-block--address">{{ post.address }}</p>
+        <div class="location-block--map"></div>
+      </div>
+		</div>
+{% endblock main %}
